@@ -1,0 +1,7 @@
+{
+  "name": "polybook",
+  "short_name": "polybook",
+  "description": "Like a facebook",
+  "start_url": "/",
+  "display": "standalone"
+}
