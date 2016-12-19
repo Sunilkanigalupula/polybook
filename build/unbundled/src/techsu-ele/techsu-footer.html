@@ -1,0 +1,174 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-layout/helpers/helpers.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="icons.html">
+
+</head><body><dom-module id="techsu-footer">
+    <template>
+        <style include="iron-flex iron-flex-alignment">
+            :host {
+                display: block;
+            }
+            layout.horizontal,
+            .layout.vertical {
+                display: -ms-flexbox;
+                display: -webkit-flex;
+            }
+            .flex {
+                -ms-flex: 1 1 0.000000001px;
+                -webkit-flex: 1;
+                flex: 1;
+                -webkit-flex-basis: 0.000000001px;
+                flex-basis: 0.000000001px;
+            }
+            a {
+                color: #999;
+                text-decoration: none;
+            }
+            .footer-media-links {
+                background: #e8345a;
+                /* a more sedated version of pink-a400 */
+
+                padding: 20px;
+            }
+            .footer-media-links a {
+                color: black;
+                display: inline-block;
+                padding: 3px 20px;
+                font-size: 13px;
+                font-weight: 500;
+                text-shadow: none;
+                text-decoration: none;
+                text-align: center;
+                min-width: 100px;
+                white-space: nowrap;
+            }
+            .footer-media-links a span {
+                line-height: 24px;
+                margin-left: 5px;
+            }
+            .footer-links {
+                background: #263238;
+                /* blue-grey-900 */
+
+                padding: 30px 10px;
+            }
+            .footer-links > * {
+                margin: 10px;
+            }
+            .footer-links .title {
+                font-family: 'Roboto Slab', 'Roboto', 'Noto', sans-serif;
+                color: white;
+                border-top: 1px solid #707375;
+                padding-top: 10px;
+                font-size: 13px;
+            }
+            .footer-links a {
+                text-decoration: none;
+                color: #979797;
+                display: block;
+                font-size: 11px;
+                line-height: 20px;
+            }
+            .copyright {
+                background: black;
+                color: white;
+                padding: 10px;
+            }
+            .copyright div {
+                font-size: 11px;
+            }
+            .copyright img {
+                padding-left: 10px;
+                height: 20px;
+            }
+            .copyright * {
+                vertical-align: middle;
+            }
+            @media (max-width: 767px) {
+                .footer-media-links a {
+                    min-width: 24px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                .footer-media-links a span {
+                    display: none;
+                }
+            }
+            @media (max-width: 479px) {
+                .footer-links.layout.horizontal {
+                    flex-direction: column;
+                    padding: 20px 10px;
+                }
+                .footer-links > * {
+                    flex: 0 0 auto;
+                }
+                .copyright .additional-text {
+                    display: none;
+                }
+            }
+        </style>
+
+        <footer>
+            <section class="footer-media-links">
+                <div class="layout horizontal center center-justified">
+                    <a href="#" title="Follow sunil on Google+" aria-label="Follow sunil on Google+">
+                        <iron-icon icon="social-icons:gplus"></iron-icon>
+                        <span>Polymer</span>
+                    </a>
+                    <a href="#" title="Follow @sunil on Twitter" aria-label="Follow sunil on Twitter">
+                        <iron-icon icon="social-icons:twitter"></iron-icon>
+                        <span>@Polymer</span>
+                    </a>
+                    <a href="#" title="Get the Sunil code on GitHub" aria-label="Get the Sunil code on GitHub">
+                        <iron-icon icon="social-icons:github"></iron-icon>
+                        <span>/Polymer</span>
+                    </a>
+
+                                    </div>
+            </section>
+
+            <section class="footer-links layout horizontal justified">
+                <div class="flex">
+                    <div class="title">Start</div>
+                    <a href="#">Your first element</a>
+                    <a href="#">Your first app</a>
+                    <a href="#">Using the tools</a>
+                </div>
+
+                <div class="flex">
+                    <div class="title">References</div>
+                    <a href="#">Sunil Reference</a>
+                    <a href="#">Guides</a>
+                </div>
+
+                <div class="flex">
+                    <div class="title">Sunil Toolbox</div>
+                    <a href="#">Overview</a>
+                    <a href="#"> Case Study</a>
+                </div>
+
+                <div class="flex">
+                    <div class="title">News</div>
+                    <a href="#">Articles</a>
+                    <a href="#">Techcasts</a>
+                </div>
+
+
+            </section>
+
+            <div class="copyright layout horizontal">
+                <div class="flex">
+                    © 2016 Techsu Allrights reserved.
+
+                </div>
+                <a href="#" on-click="_smoothScrollToTop">
+          Back to Top<img src="#" alt="techsu Logo">
+        </a>
+            </div>
+        </footer>
+    </template>
+
+    <script>Polymer({is:"techsu-footer",_smoothScrollToTop:function(o){o.preventDefault(),Polymer.AppLayout.scroll({behavior:"smooth"}),o.target.blur()}});</script>
+</dom-module>
+</body></html>
